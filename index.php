@@ -52,7 +52,7 @@
 		</div>
 		</div>
 		<div class="form-group">
-			<a href="#" id="add">add csv</a>
+			<a href="#" id="add"><span class="glyphicon glyphicon-plus">add csv</span></a>
 			<input type="submit" name="upload" value="Upload" id="csv_submit"/>
 		</div>
 	</form>
