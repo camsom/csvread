@@ -7,7 +7,7 @@
 			i = 2;
 			$("#add").click(function(){
 				var csvname = "csv" + i;
-				$('#csv_fields').append('<div class="form-group"><label for="' + csvname + '" style="control-label">File' + i + ':</label><input type="file" name="' + csvname + '" id="' + csvname + '" value="choose csv" style="form-control"/></div>');
+				$('#csv_fields').append('<div class="form-group"><label for="' + csvname + '" style="control-label">File ' + i + ':</label><input type="file" name="' + csvname + '" id="' + csvname + '" value="choose csv" style="form-control"/><p class="help-block">Please choose a .csv file</p></div><hr>');
 				i++;
 			});
 
@@ -29,30 +29,25 @@
 			});
 		});	
 	</script>
-	
-	<style>
-		h1 {
-			text-align:center;
-		}
-	
-	</style>
 
 
 
 
 </head>
 <body>
-<?php echo "<h1>CSV Reader</h1>"; ?>
+<?php echo "<h1>CSV Reader</h1><hr>"; ?>
 <div class="fluid-container">
 	<form id="csv_form" action="csv_manager.php" method="post" enctype="multipart/form-data">
 		<div id="csv_fields">
 		<div class="form-group">
 			<label for="csv1" style="control-label">File:</label>
 			<input type="file" name="csv1" id="csv1" value="choose csv" style="form-control"/>
+			<p class="help-block">Please choose a .csv file</p>
 		</div>
+		<hr>
 		</div>
 		<div class="form-group">
-			<a href="#" id="add"><span class="glyphicon glyphicon-plus">add csv</span></a>
+			<a href="#" id="add" style="text-decoration:none;color:#000;"><span class="glyphicon glyphicon-plus" style="color:rgb(0,255,0);"></span>add csv</a>
 			<input type="submit" name="upload" value="Upload" id="csv_submit"/>
 		</div>
 	</form>

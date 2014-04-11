@@ -81,7 +81,7 @@ for ($i=1; $i<=count($_FILES); $i++){
 }
 
 $results = $db->query("SELECT DISTINCT * FROM trains ORDER BY RUN_NUMBER ASC");
-echo "<table>";
+echo "<table class='table table-hover'>";
 printcleanheaders();
 while ($row = $results->fetchArray()){
 	printsqlrow($row);
